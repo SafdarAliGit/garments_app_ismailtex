@@ -5,6 +5,29 @@ app_description = "for ismailtex"
 app_email = "safdar211@gmail.com"
 app_license = "mit"
 
+doc_events = {
+# 	"*": {
+# 		"on_update": "method",
+# 		"on_cancel": "method",
+# 		"on_trash": "method"
+#	},
+	"Purchase Order":{
+		"before_submit": "garments_app_ismailtex.events.purchase_order.validate"
+	},
+	"BOM": {
+		"validate": "garments_app_ismailtex.events.bom.bom_validation_for_percentage_fields"
+	}
+	,
+	"Subcontracting Order": {
+		"validate": "garments_app_ismailtex.events.subcontracting_order.calculate_total_reqiured_qty_and_no_bags"
+	}
+}
+
+doctype_js	= {
+	"Item": "public/js/item.js"
+}
+
+
 # Includes in <head>
 # ------------------
 
