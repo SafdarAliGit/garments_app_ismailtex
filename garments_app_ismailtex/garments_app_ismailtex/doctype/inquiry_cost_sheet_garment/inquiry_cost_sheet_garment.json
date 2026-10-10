@@ -550,7 +550,7 @@
    "label": "City"
   },
   {
-   "fetch_from": "buyer_name.country",
+   "fetch_from": "buyer_name.custom_country",
    "fieldname": "country",
    "fieldtype": "Data",
    "label": "Country"
@@ -820,7 +820,7 @@
    "link_fieldname": "custom_inquiry_cost_sheet_garment"
   }
  ],
- "modified": "2026-08-13 21:29:23.448741",
+ "modified": "2026-10-10 16:46:19.149612",
  "modified_by": "Administrator",
  "module": "Garments App Ismailtex",
  "name": "Inquiry Cost Sheet Garment",
